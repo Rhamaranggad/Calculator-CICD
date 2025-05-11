@@ -8,8 +8,8 @@ on:
 
 jobs:
   test:
-        runs-on: ubuntu-latest  
-        # di sini kita buat seolah olah ada indentasi yang salah 
+    runs-on: ubuntu-latest  
+    
 
     steps:
     - uses: actions/checkout@v2
