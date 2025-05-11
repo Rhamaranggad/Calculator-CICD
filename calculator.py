@@ -14,10 +14,14 @@ def bagi(a, b):
 
 import math
 
+def pangkat(a, b):
+    return a ** b
+
 def akar(a):
     if a < 0:
         raise ValueError("Tidak dapat menghitung akar dari bilangan negatif")
     return math.sqrt(a)
+
 
 def main():
     print("Kalkulator Sederhana")
@@ -26,7 +30,8 @@ def main():
     print("2. Pengurangan")
     print("3. Perkalian")
     print("4. Pembagian")
-    print("5. Akar Kuadrat")
+    print("5. Pangkat")
+    print("6. Akar Kuadrat")
     
     pilihan = input("Masukkan pilihan (1/2/3/4): ")
     angka1 = float(input("Masukkan angka pertama: "))
@@ -44,12 +49,16 @@ def main():
         except ValueError as e:
             print(e)
     elif pilihan == '5':
+            print(f"{angka1} ^ {angka2} = {pangkat(angka1, angka2)}")
+    elif pilihan == '6':
         try:
             print(f"Akar kuadrat dari {angka1} = {akar(angka1)}")
         except ValueError as e:
-            print(e)
+             print(e)
     else:
         print("Pilihan tidak valid")
+
+    
 
 if __name__ == "__main__":
     main()
